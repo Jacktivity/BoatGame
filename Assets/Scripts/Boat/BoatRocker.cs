@@ -34,6 +34,9 @@ public class BoatRocker : MonoBehaviour {
 
         if(euler.z > loseAngle && euler.z < (360 - loseAngle))
         {
+            //
+            //Player Died
+            //
             euler.z = 0;
             transform.rotation = Quaternion.Euler(euler);
         }

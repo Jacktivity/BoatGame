@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Weather : MonoBehaviour
 {
@@ -8,9 +6,18 @@ public class Weather : MonoBehaviour
     //Wind speed pushing the boat
     public float windSpeed = 0;
     public float maxWindSpeed = 15;
+    
+    //used to quickly or slowly reduce wind speed
+    public float windReduceMultiplier = 2;
 
     public float windDifference = 0;
     public float difficultyMultiplier = 1;
+
+    //Delays stopping the boat constantly moving
+    public float timeDelay = 0;
+    
+    // 4 seconds delay
+    public float maxWindDelay = 4;
 
     // Use this for initialization
     void Start()
@@ -21,7 +28,7 @@ public class Weather : MonoBehaviour
     //Add random wind
     void AddWind(float addWindSpeed)
     {
-        windDifference += (addWindSpeed * Time.deltaTime);
+        windDifference += addWindSpeed;
     }
 
     //Add a Gust of wind
@@ -44,25 +51,47 @@ public class Weather : MonoBehaviour
     void Update()
     {
 
-        int rand = Random.Range(0, 100);
-        //Add wind speed difference
-        if (rand > 62 && rand < 66)
+        if (timeDelay <= 0)
         {
-            AddGust();
+            int rand = Random.Range(0, 100);
+
+            //Add wind speed difference
+            if (rand > 62 && rand < 66)
+            {
+                AddGust();
+            }
+            else
+                AddWind(Random.Range(-maxWindSpeed, maxWindSpeed));
+
+            //Clamp windDifferect stopping it from going one direction to much
+            windDifference = Mathf.Clamp(windDifference, -(maxWindSpeed * difficultyMultiplier), (maxWindSpeed * difficultyMultiplier));
+
+            //Update windSpeed;
+            windSpeed += windDifference;
+
+            //Clamp wind speed
+            windSpeed = Mathf.Clamp(windSpeed, -maxWindSpeed, maxWindSpeed);
+
+            timeDelay = Random.Range(0.0f, maxWindDelay);
         }
+        else
+        {
+            timeDelay -= Time.deltaTime;
 
-        AddWind(Random.Range(-maxWindSpeed, maxWindSpeed));
-
-        //Clamp windDifferect stopping it from going one direction to much
-        windDifference = Mathf.Clamp(windDifference, -(maxWindSpeed * difficultyMultiplier), (maxWindSpeed * difficultyMultiplier));
-
-        //Update windSpeed;
-        windSpeed += (windDifference * Time.deltaTime);
-
-        //Clamp wind speed
-        windSpeed = Mathf.Clamp(windSpeed, -maxWindSpeed, maxWindSpeed);
+            if(windSpeed > 0)
+            {
+                windSpeed -= (windReduceMultiplier * Time.deltaTime);
+                if (windSpeed < 0)
+                    windSpeed = 0;
+            }
+            else if(windSpeed < 0)
+            {
+                windSpeed += (windReduceMultiplier * Time.deltaTime);
+                if (windSpeed > 0)
+                    windSpeed = 0;
+            }
+        }
     }
-
 
     public float GetMaxWindSpeed()
     {

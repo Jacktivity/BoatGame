@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BoatGame.unity
+- path: Assets/Test Scene.unity
   isLoaded: 1
   isActive: 1

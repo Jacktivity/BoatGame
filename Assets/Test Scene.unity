@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 467395297}
   - component: {fileID: 467395296}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WeatherSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,9 +136,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windSpeed: 0
-  maxWindSpeed: 5
+  maxWindSpeed: 14
+  windReduceMultiplier: 2
   windDifference: 0
   difficultyMultiplier: 1
+  timeDelay: 0
+  maxWindDelay: 1
 --- !u!4 &467395297
 Transform:
   m_ObjectHideFlags: 0
