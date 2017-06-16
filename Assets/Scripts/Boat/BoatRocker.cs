@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoatRocker : MonoBehaviour {
+public class BoatRocker : MonoBehaviour
+{
 
     // >0 = pushing right. <0 pushing left
     public float pushingForce = 0;
@@ -11,10 +12,11 @@ public class BoatRocker : MonoBehaviour {
 
     public Weather currentWeather;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+
+    }
 
     //Adjusts the boats balance
     void adjustBalance(float wind, float push)
@@ -32,7 +34,7 @@ public class BoatRocker : MonoBehaviour {
     {
         Vector3 euler = transform.rotation.eulerAngles;
 
-        if(euler.z > loseAngle && euler.z < (360 - loseAngle))
+        if (euler.z > loseAngle && euler.z < (360 - loseAngle))
         {
             //
             //Player Died
@@ -42,16 +44,20 @@ public class BoatRocker : MonoBehaviour {
         }
     }
 
-	// Update is called once per frame
-	void Update () {
-
+    // Update is called once per frame
+    void Update()
+    {
+        
         //Get player pushing force
+#if UNITY_STANDALONE || UNITY_EDITOR
         pushingForce = (currentWeather.GetMaxWindSpeed() * 2) * Input.GetAxis(Tags.Horizontal);
-
+#elif UNITY_IOS || UNITY_ANDROID
+        pushingForce = (currentWeather.GetMaxWindSpeed() * 2) * Input.acceleration.z;
+#endif
         //Adjust the boats balance
         adjustBalance(currentWeather.GetWindSpeed(), pushingForce);
 
         //Check if we are still okay
         checkBalance();
-	}
+    }
 }
