@@ -16,7 +16,6 @@ public class SpearFire : MonoBehaviour
     public GameObject spearPrefab;
 
     //Only hold a spear when on pc
-#if UNITY_STANDALONE || UNITY_EDITOR_WIN
     private GameObject heldSpear;
 
     private void Start()
@@ -33,16 +32,14 @@ public class SpearFire : MonoBehaviour
         spawnPos.z = -1;
 
         //Spawn aiming down
-        heldSpear = Instantiate(spearPrefab, spawnPos, Quaternion.identity);
+        heldSpear = Instantiate(spearPrefab, spawnPos, Quaternion.AngleAxis(Mathf.Atan2(transform.position.y - 1, transform.position.x) * Mathf.Rad2Deg, Vector3.forward));
     }
-#endif
+
 
     //Fire Spear
     void FireSpear(Vector3 firePos)
     {
         firePos.z = -1;
-
-#if UNITY_STANDALONE || UNITY_EDITOR_WIN
 
         //Shot the held spear
         heldSpear.GetComponent<Spear>().Shoot(firePos);
@@ -50,12 +47,6 @@ public class SpearFire : MonoBehaviour
 
         //Set shoot delay
         remainingDelay = shootDelay;
-
-#elif UNITY_ANDROID
-        //Fire spear
-        GameObject spear = Instantiate(spearPrefab, (transform.position - spearIffset), Quaternion.LookRotation((transform.position - spearOffset) - firePos));
-        spear.GetComponent<Spear>().Shoot(firePos);
-#endif
     }
 
     // Update is called once per frame
