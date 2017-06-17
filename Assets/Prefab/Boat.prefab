@@ -70,7 +70,7 @@ MonoBehaviour:
   maxSpearHeight: -10
   shootDelay: 1.5
   spearOffset: {x: 0, y: -0.5, z: 0}
-  spearPrefab: {fileID: 1762858962722738, guid: 6ba8df353fa6d864c9acc78b4723ecc6,
+  spearPrefab: {fileID: 1624902759975856, guid: c83b82f7e1121b0488a96e86725f9b4f,
     type: 2}
 --- !u!212 &212020025417434960
 SpriteRenderer:

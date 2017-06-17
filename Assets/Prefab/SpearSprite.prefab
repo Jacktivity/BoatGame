@@ -9,34 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1762858962722738}
+  m_RootGameObject: {fileID: 1624902759975856}
   m_IsPrefabParent: 1
---- !u!1 &1762858962722738
+--- !u!1 &1624902759975856
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4049285081773218}
-  - component: {fileID: 114069896289905926}
-  m_Layer: 0
-  m_Name: SpearPrefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1793607767533882
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4637022512482244}
-  - component: {fileID: 212028742439632108}
-  - component: {fileID: 61399249946861092}
+  - component: {fileID: 4116385356894700}
+  - component: {fileID: 212538415263161260}
+  - component: {fileID: 61068996135404384}
+  - component: {fileID: 114269486560074624}
   m_Layer: 0
   m_Name: SpearSprite
   m_TagString: Untagged
@@ -44,49 +29,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4049285081773218
+--- !u!4 &4116385356894700
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1762858962722738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1624902759975856}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.5395646, y: -1.7195288, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4637022512482244}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4637022512482244
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793607767533882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4049285081773218}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61399249946861092
+--- !u!61 &61068996135404384
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793607767533882}
+  m_GameObject: {fileID: 1624902759975856}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.34, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.7357319, y: 0.5}
     oldSize: {x: 1.28, y: 0.64}
     newSize: {x: 1.28, y: 0.64}
     adaptiveTilingThreshold: 0.5
@@ -94,14 +65,14 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.08, y: 0.28}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
---- !u!114 &114069896289905926
+--- !u!114 &114269486560074624
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1762858962722738}
+  m_GameObject: {fileID: 1624902759975856}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98b6c8df0fe443945be8481520fb1f29, type: 3}
@@ -110,12 +81,12 @@ MonoBehaviour:
   speed: 10
   lifeTime: 3
   movementDirection: {x: 0, y: 0, z: 0}
---- !u!212 &212028742439632108
+--- !u!212 &212538415263161260
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793607767533882}
+  m_GameObject: {fileID: 1624902759975856}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

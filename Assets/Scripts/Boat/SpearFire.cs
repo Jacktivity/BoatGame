@@ -56,9 +56,10 @@ public class SpearFire : MonoBehaviour
 #if UNITY_STANDALONE || UNITY_EDITOR_WIN
 
         //Wait for the spawn delay 
-        if (heldSpear != null || remainingDelay <= 0)
+        if (heldSpear != null && remainingDelay <= 0)
         {
-            Vector3 mousePosition = Input.mousePosition - (new Vector3(Screen.width / 2, (Screen.height / 2) + (spearOffset.y * 63), 0));
+            
+            Vector3 mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(heldSpear.transform.position);
 
             //If the mouse is under the ship
             if (mousePosition.y < (maxSpearHeight - spearOffset.y))
