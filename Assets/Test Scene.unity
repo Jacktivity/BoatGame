@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windSpeed: 0
-  maxWindSpeed: 14
+  maxWindSpeed: 10
   windReduceMultiplier: 2
   windDifference: 0
   difficultyMultiplier: 1
@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 1185663711}
   - component: {fileID: 1185663710}
   - component: {fileID: 1185663709}
+  - component: {fileID: 1185663712}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -328,3 +329,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1185663712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185663708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa53235e090b443b73df07cf681e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpearHeight: -10
+  shootDelay: 1.5
+  spearOffset: {x: 0, y: -0.5, z: 0}
+  spearPrefab: {fileID: 1762858962722738, guid: 6ba8df353fa6d864c9acc78b4723ecc6,
+    type: 2}
