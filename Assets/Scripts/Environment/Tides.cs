@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tides : MonoBehaviour
 {
     public float speed;
+    public float ySpeed;
     public float distance;
     public Vector3 startPos;
     public float startPosX;
@@ -22,12 +23,20 @@ public class Tides : MonoBehaviour
     void Update()
     {
 
-        gameObject.GetComponent<Transform>().position = new Vector3(gameObject.GetComponent<Transform>().position.x - speed, gameObject.GetComponent<Transform>().position.y);
+        gameObject.GetComponent<Transform>().position = new Vector3(gameObject.GetComponent<Transform>().position.x - speed, gameObject.GetComponent<Transform>().position.y + ySpeed);
+      
 
-        
         if (gameObject.GetComponent<Transform>().position.x <= distance)
         {
-            gameObject.GetComponent<Transform>().position = new Vector3(23f, gameObject.GetComponent<Transform>().position.y);
+            gameObject.GetComponent<Transform>().position = new Vector3(22.8f, gameObject.GetComponent<Transform>().position.y);
+        }
+        if (gameObject.GetComponent<Transform>().position.y >= startPos.y +0.1)
+        {
+            ySpeed *=  -1;
+        }
+        else if (gameObject.GetComponent<Transform>().position.y <= startPos.y - 0.1)
+        {
+            ySpeed *= -1;
         }
         
     }
