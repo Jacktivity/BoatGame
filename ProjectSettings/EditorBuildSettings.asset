@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main Menu.unity
     guid: 9c184ed41a17387488caabf8f412e530
+<<<<<<< HEAD
   - enabled: 0
     path: Assets/BoatGame.unity
     guid: bf0a782437724914ba8f71bbaca8858c
   - enabled: 1
     path: Assets/MainGame.unity
     guid: 5ffdc960e5083cf4aa8b95bdcea2d899
+=======
+  - enabled: 1
+    path: Assets/MainGame.unity
+    guid: 00000000000000000000000000000000
+>>>>>>> origin/master
