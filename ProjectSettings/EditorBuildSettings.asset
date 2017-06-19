@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Main Menu.unity
     guid: 9c184ed41a17387488caabf8f412e530
   - enabled: 1
-    path: Assets/Test Scene.unity
+    path: Assets/BoatGame.unity
     guid: 00000000000000000000000000000000

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -25,15 +26,23 @@ public class PauseMenu : MonoBehaviour {
                 Time.timeScale = 0f;
                 paused = true;
             }
-
-            if (touchDeltaPosition.x < -26 && paused)
-            {
-                pausemenucanvas.SetActive(false);
-                Time.timeScale = 1f;
-                paused = false;
-            }
         }
 	}
 
+    public void backtogame()
+    {
+        Time.timeScale = 1f;
+        paused = false;
+        pausemenucanvas.SetActive(false);
+    }
+
+    public void backtomm()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void volumemute()
+    {
+    }
 
 }

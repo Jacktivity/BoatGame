@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject mainmenucanvas;
     public GameObject startmenucanvas;
+    public Button survivalmodebutton;
     // Use this for initialization
     void Start ()
     {
         mainmenucanvas.SetActive(true);
         startmenucanvas.SetActive(false);
+        survivalmodebutton.interactable = false;
     }
 	
 	// Update is called once per frame
@@ -37,8 +40,13 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void btnSM()
+    public void btnStoryMode()
     {
-        SceneManager.LoadScene("Test Scene");
+        SceneManager.LoadScene("BoatGame");
+    }
+
+    public void btnSurvivalMode()
+    {
+        SceneManager.LoadScene("SurvivalMode");
     }
 }
