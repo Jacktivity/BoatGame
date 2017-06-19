@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class fishScript : MonoBehaviour {
-
+    public Vector3 speed;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +12,7 @@ public class fishScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        gameObject.GetComponent<Transform>().position = new Vector3(gameObject.GetComponent<Transform>().position.x - 0.2f, gameObject.GetComponent<Transform>().position.y);
+        transform.position += speed * Time.deltaTime;
         if (gameObject.GetComponent<Transform>().position.x <= -23)
         {
             Destroy(gameObject);

@@ -23,8 +23,9 @@ public class Tides : MonoBehaviour
     void Update()
     {
 
-        gameObject.GetComponent<Transform>().position = new Vector3(gameObject.GetComponent<Transform>().position.x - speed, gameObject.GetComponent<Transform>().position.y + ySpeed);
-      
+   
+        transform.position += new Vector3(speed, ySpeed) * Time.deltaTime;
+
 
         if (gameObject.GetComponent<Transform>().position.x <= distance)
         {
