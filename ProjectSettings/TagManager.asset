@@ -45,3 +45,6 @@ TagManager:
   - name: tides
     uniqueID: 240140363
     locked: 0
+  - name: spear
+    uniqueID: 114093199
+    locked: 0
