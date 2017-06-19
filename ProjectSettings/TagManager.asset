@@ -48,3 +48,6 @@ TagManager:
   - name: spear
     uniqueID: 114093199
     locked: 0
+  - name: UI
+    uniqueID: 1752516763
+    locked: 0
