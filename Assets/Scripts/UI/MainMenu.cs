@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
 
     public void btnStoryMode()
     {
-        SceneManager.LoadScene("BoatGame");
+        SceneManager.LoadScene("MainGame");
     }
 
     public void btnSurvivalMode()
