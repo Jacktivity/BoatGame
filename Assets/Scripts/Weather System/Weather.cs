@@ -5,19 +5,24 @@ public class Weather : MonoBehaviour
 
     //Wind speed pushing the boat
     public float windSpeed = 0;
+    [Range(5.0f, 16.0f)]
     public float maxWindSpeed = 15;
     
     //used to quickly or slowly reduce wind speed
     public float windReduceMultiplier = 2;
 
-    public float windDifference = 0;
+    float windDifference = 0;
+
+    //possible for more unpredictable waves
+    // 1.0 - 3.0 more than 3 reduces the chance of waves moving side to side often
+    [Range(1.0f, 3.0f)]
     public float difficultyMultiplier = 1;
 
     //Delays stopping the boat constantly moving
-    public float timeDelay = 0;
+    float timeDelay = 0;
     
     // 4 seconds delay
-    public float maxWindDelay = 4;
+    public float maxWindDelay = 1.5f;
 
     // Use this for initialization
     void Start()
