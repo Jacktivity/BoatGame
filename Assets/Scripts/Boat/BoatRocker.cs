@@ -13,11 +13,11 @@ public class BoatRocker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //Only works with standalone version of android
+     /*   //Only works with standalone version of android
         //Comment if statement to work with unity remote
 #if UNITY_IOS || UNITY_ANDROID
         Screen.orientation = ScreenOrientation.Landscape;
-#endif
+#endif*/
     }
 
     //Adjusts the boats balance
