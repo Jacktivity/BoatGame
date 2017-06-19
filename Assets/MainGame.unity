@@ -431,13 +431,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 382492880}
+  - component: {fileID: 382492881}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &382492880
 Transform:
   m_ObjectHideFlags: 0
@@ -451,6 +452,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
+--- !u!114 &382492881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382492879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c79db0e5bbbf6c48b9fa8ba173f0b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenFish: {fileID: 0}
+  purpleFish: {fileID: 0}
+  theFish: {fileID: 0}
 --- !u!4 &431039305 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4783168649045272, guid: 67c0ff4059b5e8a42a016ca3bf080243,
@@ -464,6 +479,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 468150707}
+  - component: {fileID: 468150708}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -484,6 +500,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
+--- !u!114 &468150708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 468150706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c79db0e5bbbf6c48b9fa8ba173f0b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenFish: {fileID: 1992376975566674, guid: a51e6f867a44b3d4bb0fdfd2b0e67637, type: 2}
+  purpleFish: {fileID: 1163997752037078, guid: 06674aa93ed53bd4b8ba4a6ba4320ce5, type: 2}
+  theFish: {fileID: 1992376975566674, guid: a51e6f867a44b3d4bb0fdfd2b0e67637, type: 2}
 --- !u!1001 &506713545
 Prefab:
   m_ObjectHideFlags: 0
@@ -1506,6 +1536,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1544703933}
+  - component: {fileID: 1544703934}
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
@@ -1526,6 +1557,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
+--- !u!114 &1544703934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1544703932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c79db0e5bbbf6c48b9fa8ba173f0b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenFish: {fileID: 1315176897523780, guid: 2f63a3988f7db174482b42ce09b561fa, type: 2}
+  purpleFish: {fileID: 1506024680563232, guid: 890ce9cac4ff33b4cb9dcad1baa865b7, type: 2}
+  theFish: {fileID: 1315176897523780, guid: 2f63a3988f7db174482b42ce09b561fa, type: 2}
 --- !u!4 &1590015645 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4154534398782352, guid: 9880c954fa03bb247833cb4797b493e2,
@@ -1679,7 +1724,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4772281107925532, guid: da9af578960679f4da801c90ccbfa728, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.67
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 4772281107925532, guid: da9af578960679f4da801c90ccbfa728, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1797,6 +1842,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1911727422}
+  - component: {fileID: 1911727423}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -1817,6 +1863,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
+--- !u!114 &1911727423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1911727421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c79db0e5bbbf6c48b9fa8ba173f0b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenFish: {fileID: 1962092813440828, guid: 6faecf2321623fd479f2caafe3d0f14d, type: 2}
+  purpleFish: {fileID: 1433631162000522, guid: 7d6bbf758d24d4a4b99aadfe5dc94be1, type: 2}
+  theFish: {fileID: 1962092813440828, guid: 6faecf2321623fd479f2caafe3d0f14d, type: 2}
 --- !u!4 &1944964617 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4783168649045272, guid: 67c0ff4059b5e8a42a016ca3bf080243,
