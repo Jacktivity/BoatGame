@@ -9,6 +9,9 @@ public class PauseMenu : MonoBehaviour
     public Button volumemute;
     public AudioSource volumeListener;
     public GameObject pausemenucanvas;
+    public GameObject sp1;
+    public GameObject sp2;
+    public GameObject sp3;
     public Sprite imageon;
     public Sprite imageoff;
     private int muted;
@@ -22,6 +25,10 @@ public class PauseMenu : MonoBehaviour
         volumeListener.volume = PlayerPrefs.GetFloat("volumeListener");
         muted = PlayerPrefs.GetInt("Muted");
         checkMuteImage();
+
+        sp1.SetActive(true);
+        sp2.SetActive(true);
+        sp3.SetActive(true);
     }
 	
 	// Update is called once per frame
@@ -35,6 +42,9 @@ public class PauseMenu : MonoBehaviour
                 pausemenucanvas.SetActive(true);
                 Time.timeScale = 0f;
                 paused = true;
+                sp1.SetActive(false);
+                sp2.SetActive(false);
+                sp3.SetActive(false);
             }
         }
 	}
@@ -44,6 +54,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         paused = false;
         pausemenucanvas.SetActive(false);
+        sp1.SetActive(true);
+        sp2.SetActive(true);
+        sp3.SetActive(true);
     }
 
     public void backtomm()

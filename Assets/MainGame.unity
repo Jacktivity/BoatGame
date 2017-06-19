@@ -1989,6 +1989,9 @@ MonoBehaviour:
   volumemute: {fileID: 2092140403}
   volumeListener: {fileID: 830336547}
   pausemenucanvas: {fileID: 536579310}
+  sp1: {fileID: 468150706}
+  sp2: {fileID: 1911727421}
+  sp3: {fileID: 1544703932}
   imageon: {fileID: 21300000, guid: 03e3ce68ecfd86c438a96d35cff6d171, type: 3}
   imageoff: {fileID: 21300000, guid: 5fcbdf82f90a4244e940a16a2d6717c6, type: 3}
 --- !u!1001 &1398677900
