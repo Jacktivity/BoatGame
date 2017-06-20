@@ -5,7 +5,6 @@ using System.Collections;
 public class VolumeController : MonoBehaviour
 {
     public Button volumemute;
-    public Button volumeSMmute;
     public AudioSource volumeListener;
     public GameObject menuScreen;
     public Sprite imageon;
@@ -54,12 +53,10 @@ public class VolumeController : MonoBehaviour
         if (PlayerPrefs.GetInt("SpriteImage") == 0)
         {
             volumemute.image.GetComponent<Image>().sprite = imageon;
-            volumeSMmute.image.GetComponent<Image>().sprite = imageon;
         }
         else
         {
             volumemute.image.GetComponent<Image>().sprite = imageoff;
-            volumeSMmute.image.GetComponent<Image>().sprite = imageoff;
         }
     }
 }
