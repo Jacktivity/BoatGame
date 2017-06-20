@@ -1,4 +1,8 @@
 sceneSetups:
-- path: Assets/BoatGame - Copy.unity
+<<<<<<< HEAD
+- path: Assets/Test Scene.unity
+=======
+- path: Assets/Main Menu.unity
+>>>>>>> 67d0868fa693d6bddda0bfe13822a417937bec68
   isLoaded: 1
   isActive: 1
