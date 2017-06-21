@@ -14,6 +14,11 @@ public class MainMenu : MonoBehaviour
     {
         menucanvas.SetActive(true);
         survivalmodebutton.interactable = false;
+
+        if (PlayerPrefs.GetInt("Survival Unlocked") == 1)
+        {
+            survivalmodebutton.interactable = true;
+        }
     }
 	
     public void btnStoryMode()
