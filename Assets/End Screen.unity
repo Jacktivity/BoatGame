@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 293317530}
   - component: {fileID: 293317529}
   m_Layer: 0
-  m_Name: btnStorymode
+  m_Name: btnbacktomm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938794738}
+      - m_Target: {fileID: 0}
         m_MethodName: mutevolume
         m_Mode: 1
         m_Arguments:
@@ -468,7 +468,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03e3ce68ecfd86c438a96d35cff6d171, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c55a038b7f10464eba3772dd79e0a3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -658,7 +658,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a4b6bef521d8c2d4e96f71acb61dfa19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3c6d1662ba32b6409855e0593ffd9a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 998418427}
   - component: {fileID: 998418426}
   m_Layer: 0
-  m_Name: btnStorymode
+  m_Name: btnbacktomm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 21ea97bb42943d645a2552576981b798, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 911006c76af45ef41a6d1baacd431354, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938794738}
+      - m_Target: {fileID: 0}
         m_MethodName: mutevolume
         m_Mode: 1
         m_Arguments:
@@ -882,7 +882,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03e3ce68ecfd86c438a96d35cff6d171, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09f10d30e32d02641bd7f85c4c856a6d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1130,7 +1130,6 @@ GameObject:
   - component: {fileID: 1938794734}
   - component: {fileID: 1938794733}
   - component: {fileID: 1938794739}
-  - component: {fileID: 1938794738}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1208,22 +1207,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1938794738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1938794732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcd5a4234a8aeb4b9d0f2c560ea81cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumemute: {fileID: 1431037346}
-  volumeListener: {fileID: 1911895244}
-  menuScreen: {fileID: 2105874813}
-  imageon: {fileID: 21300000, guid: 03e3ce68ecfd86c438a96d35cff6d171, type: 3}
-  imageoff: {fileID: 21300000, guid: 5fcbdf82f90a4244e940a16a2d6717c6, type: 3}
 --- !u!114 &1938794739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,14 +1218,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0551c5b979b8024f9b9259d6f5f7167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinnerCanvas: {fileID: 0}
-  LoserCanvas: {fileID: 0}
-  volumewinnermute: {fileID: 0}
-  volumelosermute: {fileID: 0}
-  volumeListener: {fileID: 0}
-  menuScreen: {fileID: 0}
-  imageon: {fileID: 0}
-  imageoff: {fileID: 0}
+  WinnerCanvas: {fileID: 1717442556}
+  LoserCanvas: {fileID: 2105874813}
+  volumewinnermute: {fileID: 761412114}
+  volumelosermute: {fileID: 1431037346}
+  volumeListener: {fileID: 1911895244}
+  menuScreen: {fileID: 1717442556}
+  imageon: {fileID: 21300000, guid: 09f10d30e32d02641bd7f85c4c856a6d, type: 3}
+  imageoff: {fileID: 21300000, guid: bb5cc9d0baee7c443951ad4e9d73ea99, type: 3}
+  secondimageon: {fileID: 21300000, guid: 8c55a038b7f10464eba3772dd79e0a3a, type: 3}
+  secondimageoff: {fileID: 21300000, guid: 64dde88920bc1b245aa220efe9d2c3c8, type: 3}
 --- !u!1 &2105874813
 GameObject:
   m_ObjectHideFlags: 0

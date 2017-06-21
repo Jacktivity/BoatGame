@@ -35,8 +35,8 @@ public class GUI : MonoBehaviour
 
         if (curhunger <= 0)
         {
+            PlayerPrefs.SetInt("Winner", 0);
             SceneManager.LoadScene("End Screen");
-            PlayerPrefs.SetInt("Winner", 1);
         }
 
 
