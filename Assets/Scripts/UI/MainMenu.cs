@@ -15,11 +15,6 @@ public class MainMenu : MonoBehaviour
         menucanvas.SetActive(true);
         survivalmodebutton.interactable = false;
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
     
     void Update()
     {
@@ -28,10 +23,6 @@ public class MainMenu : MonoBehaviour
             survivalmodebutton.interactable = true;
         }
     }
-<<<<<<< HEAD
-=======
->>>>>>> bb7a37a39446f960628140d14d795d6463e8dcb8
->>>>>>> origin/master
 	
     public void btnStoryMode()
     {
