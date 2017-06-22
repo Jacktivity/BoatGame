@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 761412115}
   - component: {fileID: 761412114}
   m_Layer: 0
-  m_Name: MuteSound
+  m_Name: MuteSoundW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1938794739}
         m_MethodName: mutevolume
         m_Mode: 1
         m_Arguments:
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1938794739}
         m_MethodName: mutevolume
         m_Mode: 1
         m_Arguments:
