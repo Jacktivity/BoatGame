@@ -15,6 +15,8 @@ public class EndScreen : MonoBehaviour
     public GameObject menuScreen;
     public Sprite imageon;
     public Sprite imageoff;
+    public Sprite secondimageon;
+    public Sprite secondimageoff;
     private int muted;
 
     void Start ()
@@ -23,12 +25,10 @@ public class EndScreen : MonoBehaviour
         {
             PlayerPrefs.SetInt("Survival Unlocked", 1);
             WinnerCanvas.SetActive(true);
-            LoserCanvas.SetActive(false);
         }
         else
         {
             LoserCanvas.SetActive(true);
-            WinnerCanvas.SetActive(false);
         }
 
 
@@ -84,12 +84,12 @@ public class EndScreen : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("SpriteImage") == 0)
         {
-            volumewinnermute.image.GetComponent<Image>().sprite = imageon;
+            volumewinnermute.image.GetComponent<Image>().sprite = secondimageon;
             volumelosermute.image.GetComponent<Image>().sprite = imageon;
         }
         else
         {
-            volumewinnermute.image.GetComponent<Image>().sprite = imageoff;
+            volumewinnermute.image.GetComponent<Image>().sprite = secondimageoff;
             volumelosermute.image.GetComponent<Image>().sprite = imageoff;
         }
     }
