@@ -16,7 +16,9 @@ public class GUI : MonoBehaviour
     private int curhunger;
     private int maxhunger = 150;
     private float t = 0.0f;
+    private float wg = 0.0f;
     private float threshold = 1.0f;
+    private float wingame = 360.0f;
 
     public int GreenFish;
     public int YellowFish;
@@ -39,6 +41,12 @@ public class GUI : MonoBehaviour
             SceneManager.LoadScene("End Screen");
         }
 
+        wg += Time.deltaTime;
+        if (wg >= wingame)
+        {
+            PlayerPrefs.SetInt("Winner", 1);
+            SceneManager.LoadScene("End Screen");
+        }
 
         t += Time.deltaTime;
         if (t >= threshold)
