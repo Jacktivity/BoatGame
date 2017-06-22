@@ -6,8 +6,11 @@ public class SpawnPoint : MonoBehaviour {
 
     public GameObject greenFish;
     public GameObject purpleFish;
+<<<<<<< HEAD
+=======
     public GameObject yellowFish;
     public GameObject redFish;
+>>>>>>> bb7a37a39446f960628140d14d795d6463e8dcb8
     public GameObject theFish;
     int randFish;
     // Use this for initialization
@@ -19,6 +22,19 @@ public class SpawnPoint : MonoBehaviour {
 	void Update ()
     {
        Vector3 spawnPos = transform.position;
+<<<<<<< HEAD
+        if (Random.Range(0, 100) >= 99)
+        {
+            randFish = Random.Range(0, 20);
+            if (randFish < 15)
+            {
+                theFish = greenFish;
+            }
+            else if (randFish >= 15)
+            {
+                theFish = purpleFish;
+            }
+=======
         if (Random.Range(0, 100) >= 98)
         {
             randFish = Random.Range(0, 100);
@@ -38,6 +54,7 @@ public class SpawnPoint : MonoBehaviour {
             {
                 theFish = redFish;
             }
+>>>>>>> bb7a37a39446f960628140d14d795d6463e8dcb8
             Instantiate(theFish, spawnPos, transform.rotation);
         }
     }

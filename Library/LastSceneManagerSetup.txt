@@ -1,4 +1,16 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Main Menu.unity
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/Test Scene.unity
+=======
+- path: Assets/Main Menu.unity
+>>>>>>> 67d0868fa693d6bddda0bfe13822a417937bec68
+=======
+- path: Assets/End Screen.unity
+>>>>>>> bb7a37a39446f960628140d14d795d6463e8dcb8
+>>>>>>> origin/master
   isLoaded: 1
   isActive: 1

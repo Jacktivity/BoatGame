@@ -65,6 +65,11 @@ public class Weather : MonoBehaviour
             {
                 AddGust();
             }
+            else if(rand > 5 && rand < 10)
+            {
+                windDifference = 0;
+                windSpeed = 0;
+            }
             else
                 AddWind(Random.Range(-maxWindSpeed, maxWindSpeed));
 
