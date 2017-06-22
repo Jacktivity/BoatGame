@@ -1,22 +1,38 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class fishScript : MonoBehaviour {
+
+
     public Vector3 speed;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    public bool caught = false;
+    public FishType fish;
+
+    GameObject spear;
+
+    public void SetSpear(GameObject spearClone)
+    {
+        spear = spearClone;
+    }
+
 	// Update is called once per frame
 	void Update ()
     {
-        transform.position += speed * Time.deltaTime;
-        if (gameObject.GetComponent<Transform>().position.x <= -23)
+        if (!caught)
         {
-            Destroy(gameObject);
+            transform.position += speed * Time.deltaTime;
+
+            if (gameObject.GetComponent<Transform>().position.x <= -23)
+            {
+                Destroy(gameObject);
+            }
         }
-       
+        else
+        {
+            GetComponent<SpriteRenderer>().sortingLayerName = Tags.SpearRenderLevel;
+            transform.position = spear.transform.position;
+        }
     }
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mover
+  - Fish
   layers:
   - Default
   - TransparentFX

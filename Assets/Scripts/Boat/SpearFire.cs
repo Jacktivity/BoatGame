@@ -35,11 +35,11 @@ public class SpearFire : MonoBehaviour
     void Update()
     {
         //Fire spear in click/touch position
-#if UNITY_STANDALONE || UNITY_EDITOR_WIN
+#if UNITY_STANDALONE || UNITY_EDITOR
 
         //Wait for the spawn delay 
         if (heldSpear.GetComponent<Spear>().canShoot())
-        {            
+        {
             Vector3 mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(heldSpear.transform.position);
 
             //If the mouse is under the ship

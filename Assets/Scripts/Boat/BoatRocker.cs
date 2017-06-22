@@ -1,5 +1,6 @@
 ﻿using Assets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoatRocker : MonoBehaviour
 {
@@ -40,11 +41,8 @@ public class BoatRocker : MonoBehaviour
 
         if (euler.z > loseAngle && euler.z < (360 - loseAngle))
         {
-            //
-            //Player Died
-            //
-            euler.z = 0;
-            transform.rotation = Quaternion.Euler(euler);
+            PlayerPrefs.SetInt("Winner", 0);
+            SceneManager.LoadScene("End Screen");
         }
     }
 

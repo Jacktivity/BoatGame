@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4993178227023894}
   - component: {fileID: 212091171172538530}
   - component: {fileID: 114977465121563032}
+  - component: {fileID: 61498916698399194}
   m_Layer: 0
   m_Name: medium fish
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,16 +36,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315176897523780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.941418, y: 7.2238507, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 1, y: 1, z: 1}
-=======
+  m_LocalPosition: {x: 0.41538623, y: -3.9747436, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
->>>>>>> bb7a37a39446f960628140d14d795d6463e8dcb8
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61498916698399194
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315176897523780}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.049987733, y: 0.15765}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 3}
+    newSize: {x: 4, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5829109, y: 1.5452042}
+  m_EdgeRadius: 0
 --- !u!114 &114977465121563032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,6 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: -8, y: 0, z: 0}
+  caught: 0
+  fish: 0
+  spear: {fileID: 0}
 --- !u!212 &212091171172538530
 SpriteRenderer:
   m_ObjectHideFlags: 1
