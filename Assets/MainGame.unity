@@ -3155,19 +3155,11 @@ MonoBehaviour:
   RedText: {fileID: 228688770}
   AnglaText: {fileID: 881112791}
   HungerText: {fileID: 1476657591}
-<<<<<<< HEAD
   GreenFish: 0
   YellowFish: 0
   PurpleFish: 0
   RedFish: 0
   AnglaFish: 0
-=======
-  GreenFish: 5
-  YellowFish: 5
-  PurpleFish: 5
-  RedFish: 5
-  AnglaFish: 5
->>>>>>> 65c7c47a86a4ee5bdcba084cc2d5f5c563c53c6c
 --- !u!1 &1388448879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,11 +4369,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-<<<<<<< HEAD
   m_SortingLayerID: 0
-=======
-  m_SortingLayerID: 1752516763
->>>>>>> 65c7c47a86a4ee5bdcba084cc2d5f5c563c53c6c
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1853265079

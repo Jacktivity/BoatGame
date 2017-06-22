@@ -1,22 +1,11 @@
-<<<<<<< HEAD
 ﻿using Assets;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Spear : MonoBehaviour
 {
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Spear : MonoBehaviour {
-
->>>>>>> 65c7c47a86a4ee5bdcba084cc2d5f5c563c53c6c
     public float speed = 5;
-    public float lifeTime = 3;
 
-<<<<<<< HEAD
     public float maxLifeTime = 1f;
     public float lifeTime = 0;
 
@@ -24,14 +13,11 @@ public class Spear : MonoBehaviour {
     public float retractingTime = 1;
 
     
-=======
->>>>>>> 65c7c47a86a4ee5bdcba084cc2d5f5c563c53c6c
     bool shot = false;
 
     //used for shoot directing
     public Vector3 movementDirection;
 
-<<<<<<< HEAD
     //Used for retraction
     Vector3 startPosition;
     Vector3 fromPosition;
@@ -59,13 +45,20 @@ public class Spear : MonoBehaviour {
         return !shot;
     }
 
-=======
->>>>>>> 65c7c47a86a4ee5bdcba084cc2d5f5c563c53c6c
     //Shoot the spear in a direction
     public void Shoot(Vector3 newDirection)
     {
+        newDirection.z = transform.position.z;
         movementDirection = (newDirection - transform.position).normalized;
+
         transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(newDirection.y, newDirection.x) * Mathf.Rad2Deg, Vector3.forward);
+
+        lifeTime = maxLifeTime;
+
+        line.SetPosition(0, startPosition);
+        line.SetPosition(1, transform.position);
+
+        line.enabled = true;
 
         shot = true;
     }
@@ -74,17 +67,18 @@ public class Spear : MonoBehaviour {
     void Update()
     {
         //If the spear has been shot
-        if (shot)
+        if (shot && !retracting)
         {
             //Move spear
             transform.position += (movementDirection * speed) * Time.deltaTime;
+
+            line.SetPosition(1, transform.position);
 
             //Reduce lifetime
             lifeTime -= Time.deltaTime;
 
             if (lifeTime <= 0)
             {
-<<<<<<< HEAD
                 fromPosition = transform.position;
                 retractingAmount = 0;
                 retracting = true;
@@ -135,9 +129,6 @@ public class Spear : MonoBehaviour {
                 retracting = false;
 
                 transform.position = startPosition;
-=======
-                Destroy(gameObject);
->>>>>>> 65c7c47a86a4ee5bdcba084cc2d5f5c563c53c6c
             }
         }
         
