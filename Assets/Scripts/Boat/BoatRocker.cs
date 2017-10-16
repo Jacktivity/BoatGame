@@ -51,13 +51,13 @@ public class BoatRocker : MonoBehaviour
     {
 
 
-/*#if UNITY_STANDALONE || UNITY_EDITOR_WIN
+#if UNITY_STANDALONE || UNITY_EDITOR_WIN
         //Get player pushing force
         pushingForce = (currentWeather.GetMaxWindSpeed() * 2) * Input.GetAxis(Tags.Horizontal);
-        */
-#if UNITY_ANDROID
+        
+//#if UNITY_ANDROID
         //Get player pushing force
-        pushingForce = (currentWeather.GetMaxWindSpeed() * 3) * Input.acceleration.x;
+  //      pushingForce = (currentWeather.GetMaxWindSpeed() * 3) * Input.acceleration.x;
         
 #endif
 
@@ -68,3 +68,4 @@ public class BoatRocker : MonoBehaviour
         checkBalance();
     }
 }
+
