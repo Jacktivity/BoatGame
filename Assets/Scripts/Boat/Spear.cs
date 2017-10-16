@@ -116,7 +116,7 @@ public class Spear : MonoBehaviour
                             break;
 
                         case FishType.Angela:
-                            gameGui.AnglaFish++;
+                            gameGui.AngelaFish++;
                             break;
                     }
 

@@ -13,7 +13,6 @@ public class MainMenu : MonoBehaviour
     void Start ()
     {
         menucanvas.SetActive(true);
-        survivalmodebutton.interactable = false;
     }
     
     void Update()

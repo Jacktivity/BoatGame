@@ -22,7 +22,7 @@ public class GUI : MonoBehaviour
     public int YellowFish;
     public int PurpleFish;
     public int RedFish;
-    public int AnglaFish;
+    public int AngelaFish;
 
 	void Start ()
     {
@@ -44,7 +44,7 @@ public class GUI : MonoBehaviour
         if (t >= threshold)
         {
             t = 0.0f;
-            curhunger -= 5;
+            curhunger -= 2;
         }
 
         if(curhunger > maxhunger)
@@ -56,44 +56,11 @@ public class GUI : MonoBehaviour
         YellowText.text = "" + YellowFish;
         PurpleText.text = "" + PurpleFish;
         RedText.text = "" + RedFish;
-        AnglaText.text = "" + AnglaFish;
+        AnglaText.text = "" + AngelaFish;
 
 
         HungerText.text = "" + curhunger + "/" + maxhunger;
     }
-
-  /*  IEnumerator removeFish()
-    {
-        if (GreenFish > 0)
-        {
-            GreenFish -= 1;
-            yield return new WaitForSeconds(10);
-        }
-
-        if (YellowFish > 0)
-        {
-            YellowFish -= 1;
-            yield return new WaitForSeconds(40);
-        }
-
-        if (PurpleFish > 0)
-        {
-            PurpleFish -= 1;
-            yield return new WaitForSeconds(90);
-        }
-
-        if (RedFish > 0)
-        {
-            RedFish -= 1;
-            yield return new WaitForSeconds(220);
-        }
-
-        if (AnglaFish > 0)
-        {
-            AnglaFish -= 1;
-            yield return new WaitForSeconds(350);
-        }
-    }*/
 
     public void btnGreenFish()
     {
@@ -133,10 +100,10 @@ public class GUI : MonoBehaviour
 
     public void btnAnglaFish()
     {
-        if (AnglaFish > 0)
+        if (AngelaFish > 0)
         {
             curhunger += 50;
-            AnglaFish -= 1;
+            AngelaFish -= 1;
         }
     }
 

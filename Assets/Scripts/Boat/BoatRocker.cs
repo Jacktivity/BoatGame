@@ -14,11 +14,11 @@ public class BoatRocker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-     /*   //Only works with standalone version of android
+       //Only works with standalone version of android
         //Comment if statement to work with unity remote
 #if UNITY_IOS || UNITY_ANDROID
         Screen.orientation = ScreenOrientation.Landscape;
-#endif*/
+#endif
     }
 
     //Adjusts the boats balance
@@ -51,11 +51,11 @@ public class BoatRocker : MonoBehaviour
     {
 
 
-#if UNITY_STANDALONE || UNITY_EDITOR_WIN
+/*#if UNITY_STANDALONE || UNITY_EDITOR_WIN
         //Get player pushing force
         pushingForce = (currentWeather.GetMaxWindSpeed() * 2) * Input.GetAxis(Tags.Horizontal);
-
-#elif UNITY_ANDROID
+        */
+#if UNITY_ANDROID
         //Get player pushing force
         pushingForce = (currentWeather.GetMaxWindSpeed() * 3) * Input.acceleration.x;
         

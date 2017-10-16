@@ -7,43 +7,44 @@ public class Tides : MonoBehaviour
     public float speed;
     public float ySpeed;
     public float distance;
-    public Vector3 startPos;
-    public float startPosX;
-    public float resetPos;
     public GameObject target;
+    public float mySizeX;
+    public bool behind;
+    public bool move;
+    public bool special;
+  
     // Use this for initialization
     void Start()
     {
-        //speed = 0;
-        startPos = gameObject.GetComponent<Transform>().position;
-        //distance = -46.5f;
-
-
+        ySpeed = 0;
+        mySizeX = gameObject.GetComponent<SpriteRenderer>().size.x;
+        move = true;
     }
-
     // Update is called once per frame
     void Update()
     {
-
-   
-        transform.position += new Vector3(speed, ySpeed) * Time.deltaTime;
-
-
+        
+        if (behind)
+        {
+            gameObject.GetComponent<Transform>().position = new Vector3((target.GetComponent<Transform>().position.x + mySizeX), gameObject.GetComponent<Transform>().position.y);
+        }
+        if (move == true)
+        {
+            transform.position += new Vector3(speed, ySpeed) * Time.deltaTime;
+        }
+        if (!behind || special)
+        {
+            move = true;
+        }
         if (gameObject.GetComponent<Transform>().position.x <= distance)
         {
-            gameObject.GetComponent<Transform>().position = new Vector3(resetPos, gameObject.GetComponent<Transform>().position.y);
-            gameObject.GetComponent<Transform>().position = new Vector3(target.GetComponent<Transform>().position.x + gameObject.GetComponent<SpriteRenderer>().size.x, gameObject.GetComponent<Transform>().position.y);
+            target.GetComponent<Tides>().behind = false;
+            behind = !behind;
+            if (behind)
+            {
+                move = false;
+            }
         }
-        if (gameObject.GetComponent<Transform>().position.y >= startPos.y +0.1)
-        {
-            ySpeed *=  -1;
-        }
-        else if (gameObject.GetComponent<Transform>().position.y <= startPos.y - 0.1)
-        {
-            ySpeed *= -1;
-        }
-        
-        
     }
     
 }
